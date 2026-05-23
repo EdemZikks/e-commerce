@@ -9,5 +9,11 @@
   // Register ONCE before all test
 
   before(() => {
+    cy.visit('/')
+    const uniqueEmail = `user${Date.now()}@test.com`
+    const password = 'testing_123@'
+    testCredentials = {email:uniqueEmail, password}
+
+    // Register the user
     
   })
