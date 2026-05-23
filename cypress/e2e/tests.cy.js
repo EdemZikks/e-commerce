@@ -1,19 +1,20 @@
-
+import SignUpPage from '../page-object/signUpPage'
 
   // Store credentials at the describe level
   // Credentials stored in testCredentials variable (persist across all test)
 
-  let testCredentials
+  //let testCredentials
 
   // before() method runs and registers the account
   // Register ONCE before all test
 
   before(() => {
     cy.visit('/')
-    const uniqueEmail = `user${Date.now()}@test.com`
-    const password = 'testing_123@'
-    testCredentials = {email:uniqueEmail, password}
+
 
     // Register the user
-    
+    it('should register a new user', () => {
+      signUpPage.CreateAccount()
+    })
+
   })
