@@ -1,3 +1,4 @@
+/// <reference types="cypress" />
 import SignUpPage from '../page-object/signUpPage'
 
   // Store credentials at the describe level
