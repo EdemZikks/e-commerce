@@ -1,4 +1,4 @@
-let testCredentials
+export let testCredentials
 
 class SignUpPage{
     createAccount(){

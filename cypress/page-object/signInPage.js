@@ -1,10 +1,10 @@
-import { test } from "mocha"
-import SignUpPage from "./signUpPage"
+import {testCredentials} from "./signUpPage"
 
 class SignInPage{
-    loginIn(){
+    logIn(){
         cy.session(testCredentials.email, () => {
             cy.visit('/')
+            cy.contains('Sign In').click()
             cy.get('#email').type(testCredentials.email)
             cy.get('#password').type(testCredentials.password)
             cy.contains('Sign In').click()
