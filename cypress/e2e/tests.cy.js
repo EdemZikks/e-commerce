@@ -16,8 +16,13 @@ describe('User Registration', () => {
   })
 
   beforeEach(() => {
-    signInPage.loginIn()
+    signInPage.logIn()
   })
-  cy.visit('/')
+  
+  it('should login successfully', () => {
+    cy.visit('/')
+    cy.get('button[title="Sign Out"]').should('be.visible')
+  })
+  
 
 })
