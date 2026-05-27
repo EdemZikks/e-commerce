@@ -13,5 +13,4 @@ class SignInPage{
         })
     }
 }
-
 export default SignInPage
