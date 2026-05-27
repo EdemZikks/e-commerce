@@ -2,11 +2,13 @@
 
 import SignUpPage from '../page-object/signUpPage'
 import SignInPage from '../page-object/signInPage'
+import ProductListingPage from '../page-object/productListingPage'
 
 
 describe('User Registration', () => {
   const signUpPage = new SignUpPage()
   const signInPage = new SignInPage()
+  const productListingPage = new ProductListingPage()
 
   before(() => {
     cy.visit('/')
@@ -17,12 +19,24 @@ describe('User Registration', () => {
 
   beforeEach(() => {
     signInPage.logIn()
+    cy.visit('/')  
   })
   
-  it('should login successfully', () => {
+  it('Should Login Successfully', () => {
     cy.visit('/')
     cy.get('button[title="Sign Out"]').should('be.visible')
   })
-  
+
+
+
+
+
+  it('Should Add Products on PLP', () => {
+    productListingPage.addProduct()
+  })
+
+
+
+
 
 })
