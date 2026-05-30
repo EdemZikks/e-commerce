@@ -11,6 +11,15 @@ class ProductListingPage {
           .click()
 
     }
+    addMultipleQuantity() {
+      cy.contains('div','Desk Lamp LED')
+        .within(() => {
+          for (let i = 0; i < 4; i++){
+            cy.get('svg.lucide-plus').click()
+          }
+          cy.contains('button', 'Add').click()
+        })
+    }
     
 }
 

@@ -27,12 +27,12 @@ describe('User Registration', () => {
     cy.get('button[title="Sign Out"]').should('be.visible')
   })
 
-
-
-
-
   it('Should Add Products on PLP', () => {
     productListingPage.addProduct()
+  })
+
+  it('Should Add Multiple Quantity of A Product', () => {
+    productListingPage.addMultipleQuantity()
   })
 
 
