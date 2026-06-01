@@ -19,9 +19,9 @@ describe('User Registration', () => {
 
   beforeEach(() => {
     signInPage.logIn()
-    cy.visit('/')  
+    cy.visit('/')
   })
-  
+
   it('Should Login Successfully', () => {
     cy.visit('/')
     cy.get('button[title="Sign Out"]').should('be.visible')
@@ -33,6 +33,10 @@ describe('User Registration', () => {
 
   it('Should Add Multiple Quantity of A Product', () => {
     productListingPage.addMultipleQuantity()
+  })
+
+  it('Should Search for a product and add to Cart', () => {
+    productListingPage.searchProducts()
   })
 
 
