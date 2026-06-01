@@ -27,6 +27,14 @@ class ProductListingPage {
           .contains('Add')
           .click()
     }
+    dropDownSearch() {
+      cy.get('select').select('Electronics')
+        .contains('div.bg-white', 'Monitor27')
+        .find('button')
+        .contains('Add')
+        .click()
+
+    }
     
 }
 
