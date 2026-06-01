@@ -20,6 +20,13 @@ class ProductListingPage {
           cy.contains('button', 'Add').click()
         })
     }
+    searchProducts() {
+      cy.get('[placeholder="Search products..."]').type('Jacket')
+        cy.contains('div.bg-white', 'Jacket')
+          .find('button')
+          .contains('Add')
+          .click()
+    }
     
 }
 
