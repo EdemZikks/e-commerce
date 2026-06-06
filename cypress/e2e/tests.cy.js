@@ -42,7 +42,7 @@ describe('User Registration', () => {
   })
 
   it('Should Search using dropdown and add to Cart', () => {
-    productListingPage.searchProducts()
+    productListingPage.dropDownSearch()
   })
 
   it('Should View PDP and Add to Cart', () => {
