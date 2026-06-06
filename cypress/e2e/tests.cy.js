@@ -3,12 +3,14 @@
 import SignUpPage from '../page-object/signUpPage'
 import SignInPage from '../page-object/signInPage'
 import ProductListingPage from '../page-object/productListingPage'
+import ProductDisplayPage from '../page-object/productDisplayPage'
 
 
 describe('User Registration', () => {
   const signUpPage = new SignUpPage()
   const signInPage = new SignInPage()
   const productListingPage = new ProductListingPage()
+  const productDisplayPage = new ProductDisplayPage()
 
   before(() => {
     cy.visit('/')
@@ -39,9 +41,19 @@ describe('User Registration', () => {
     productListingPage.searchProducts()
   })
 
-    it('Should Search using dropdown and add to Cart', () => {
+  it('Should Search using dropdown and add to Cart', () => {
     productListingPage.searchProducts()
   })
+
+  it('Should View PDP and Add to Cart', () => {
+    productDisplayPage.viewProductDetails()
+  })
+
+
+
+
+
+
 
 
 
