@@ -28,8 +28,10 @@ class ProductListingPage {
           .click()
     }
     dropDownSearch() {
-      cy.get('select').select('Electronics')
-        .contains('div.bg-white', 'Monitor 27')
+      cy.get('select[class*="px-4"]')
+        .select('Electronics')
+        
+      cy.contains('div.bg-white', 'Monitor 27')
         .find('button')
         .contains('Add')
         .click()
