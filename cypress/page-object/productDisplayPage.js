@@ -8,10 +8,10 @@ class ProductDisplayPage {
     cy.contains('div', 'Product Details')
       .should('be.visible')
 
-    cy.get('div.bg-white')
+    cy.get('div.grid')
       .within(() => {
         cy.get('svg.lucide-plus').parent().click()
-        cy.contains('button', 'Add').click()
+        cy.contains('button', 'Add to Cart').click()
       })
   }
 }
